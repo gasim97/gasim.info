@@ -892,10 +892,6 @@ input, select, textarea {
 							font-size: 0.5em;
 						}
 
-					#main .item.thumb h2 {
-						display: none;
-					}
-
 		}
 
 		@media screen and (max-width: 480px) {
