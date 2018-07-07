@@ -891,6 +891,10 @@ input, select, textarea {
 						#main .item.intro3 p {
 							font-size: 0.5em;
 						}
+			
+						#main .item.thumb h2 {
+							font-size: 0.5em;
+						}
 
 		}
 
