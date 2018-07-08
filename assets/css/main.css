@@ -230,7 +230,8 @@ input, select, textarea {
 			}
 
 				ul.icons li a:hover {
-					-webkit-filter: brightness(50%);
+					color: #00375B;
+                    			transition: all 0.4s ease;
 				}
 
 			ul.icons li:first-child {
