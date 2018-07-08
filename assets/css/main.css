@@ -230,7 +230,7 @@ input, select, textarea {
 			}
 
 				ul.icons li a:hover {
-					opacity: 1.0;
+					-webkit-filter: brightness(50%);
 				}
 
 			ul.icons li:first-child {
@@ -1125,15 +1125,3 @@ input, select, textarea {
 				}
 
 		}
-
-        hr { 
-            display: flex;
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-            margin-left: 0.5em;
-            align-self: flex-end;
-            border-style: solid;
-            border-width: 1px;
-            color: black;
-            opacity: 0.65;
-        }
