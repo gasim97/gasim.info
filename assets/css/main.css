@@ -327,6 +327,7 @@ input, select, textarea {
 /* Scroll Zone */
 
 	.scrollZone {
+		margin-top: 150px;
 		position: fixed;
 		width: 6rem;
 		height: 100vh;
@@ -356,6 +357,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
+		margin-top: 30px;
 		-moz-transition: opacity 1s ease-in-out;
 		-webkit-transition: opacity 1s ease-in-out;
 		-ms-transition: opacity 1s ease-in-out;
@@ -1126,3 +1128,50 @@ input, select, textarea {
 				}
 
 		}
+
+/*----- Menu Outline -----*/
+.menu-wrap {
+	width:100%;
+	background:rgba(18, 21, 29, 0.5);
+    position: absolute;
+}
+
+.menu {
+	width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu li {
+	margin:0px;
+	list-style:none;
+    font-family: FontAwesome;
+}
+
+.menu a {
+	transition: all linear 0.4s;
+}
+
+.menu li:hover > a, .menu .current-item > a {
+	text-decoration:none;
+	color:#FFFFFF;
+}
+
+/*----- Top Level -----*/
+.menu > ul > li {
+	float: left;
+	display: inline-block;
+	position: relative;
+	font-size: 0.8em;
+}
+
+.menu > ul > li > a {
+    width: 12em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+}
+
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+	background: rgba(18, 21, 29, 0.35);
+}
