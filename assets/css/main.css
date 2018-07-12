@@ -229,8 +229,8 @@ input, select, textarea {
 				transition: opacity 0.25s ease-in-out;
 			}
 
-				ul.icons li a:hover {
-					color: #00375B;
+				ul.icons li a:hover, ul.icons .current-item a {
+					color: rgba(18, 21, 29, 0.85);
                     			transition: all 0.4s ease;
 				}
 
@@ -1131,8 +1131,7 @@ input, select, textarea {
 
 /*----- Menu Outline -----*/
 .menu-wrap {
-	width:100%;
-	background:rgba(18, 21, 29, 0.5);
+	width: 100%;
     position: fixed;
     z-index: 2;
 }
@@ -1152,18 +1151,18 @@ input, select, textarea {
 }
 
 .menu li {
-	margin:0px;
-	list-style:none;
+	margin: 0px;
+	list-style: none;
     font-family: FontAwesome;
 }
 
 .menu a {
+    color: #000000;
 	transition: all linear 0.4s;
 }
 
 .menu li:hover > a, .menu .current-item > a {
 	text-decoration:none;
-	color:#FFFFFF;
 }
 
 /*----- Top Level -----*/
@@ -1175,6 +1174,8 @@ input, select, textarea {
 }
 
 .menu > ul > li > a {
+    background: #FFFFFF;
+    opacity: 0.85;
     width: 12em;
 	padding: 2px;
 	display: inline-block;
@@ -1182,5 +1183,6 @@ input, select, textarea {
 }
 
 .menu > ul > li:hover > a, .menu > ul > .current-item > a {
-	background: rgba(18, 21, 29, 0.35);
+	background: rgba(18, 21, 29, 0.85);
+    color: #FFFFFF;
 }
