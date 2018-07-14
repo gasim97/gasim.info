@@ -386,7 +386,7 @@ input, select, textarea {
 		}
 
 			#main .items > :last-child {
-				border-right: solid 10px rgba(15, 0, 0, 0);
+				border-right: solid 0px rgba(15, 0, 0, 0);
                 opacity: 0.965;
 			}
 
@@ -595,7 +595,7 @@ input, select, textarea {
 			#main .item.thumb {
 				display: block;
 				position: relative;
-				background: rgba(15, 0, 0, 0);
+				background: rgba(18, 21, 29, 1);
 				cursor: default;
                 text-overflow: ellipsis;
 			}
