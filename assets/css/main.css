@@ -595,7 +595,7 @@ input, select, textarea {
 			#main .item.thumb {
 				display: block;
 				position: relative;
-				background: rgba(18, 21, 29, 1);
+				background: rgba(18, 21, 29, 0.85);
 				cursor: default;
                 text-overflow: ellipsis;
 			}
