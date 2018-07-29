@@ -330,7 +330,7 @@ input, select, textarea {
 		margin-top: 150px;
 		position: fixed;
 		width: 6rem;
-		height: 100vh;
+		height: 55vh;
 		cursor: -moz-grab;
 		cursor: -webkit-grab;
 		cursor: -ms-grab;
