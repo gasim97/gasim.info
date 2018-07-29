@@ -329,7 +329,7 @@ input, select, textarea {
 	.scrollZone {
 		margin-top: 150px;
 		position: fixed;
-		width: 6rem;
+		width: 3rem;
 		height: 55vh;
 		cursor: -moz-grab;
 		cursor: -webkit-grab;
