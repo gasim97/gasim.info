@@ -30,7 +30,7 @@
 	<nav class="menu">
 	    <ul class="clearfix">
 		<li><a onclick="togglevideo()">Video | <span class="icon fa-power-off"></span></a></li>
-		<li><a onclick="playvideo()"><span class="icon fa-play"></span></a></li>
+		<li><a onclick="playvideo() id="play-button"><span class="icon fa-play"></span></a></li>
 	    </ul>
 	</nav>
 	</div>
@@ -138,29 +138,36 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 				function togglevideo() {
-				    var vid = document.getElementById("bgvideo");
-				    var menu = document.getElementById("menu");
-				    var menuPaused = document.getElementById("menu-paused");
-				    var menuClicked = document.getElementById("menu-clicked");
-				    if (vid.style.display === "none") {
-					vid.style.display = "block";
-					menuClicked.style.display = "none";
-					menu.style.display = "block";
-					vid.play();
-				    } else {
-					vid.style.display = "none";
-					menu.style.display = "none";
-					menuPaused.style.display = "none";
-					menuClicked.style.display = "block";
-				    }
+				var vid = document.getElementById("bgvideo");
+				var menu = document.getElementById("menu");
+				var menuPaused = document.getElementById("menu-paused");
+				var menuClicked = document.getElementById("menu-clicked");
+				if (vid.style.display === "none") {
+				vid.style.display = "block";
+				menuClicked.style.display = "none";
+				if (vid.paused) {
+				    menuPaused.style.display = "block";
+				}
+				else {
+				    menu.style.display = "block";
+				}
+				} else {
+				vid.style.display = "none";
+				menu.style.display = "none";
+				menuPaused.style.display = "none";
+				menuClicked.style.display = "block";
+				}
 				}
 				function pausevideo() {
-				    var vid = document.getElementById("bgvideo");
-				    var menu = document.getElementById("menu");
-				    var menuPaused = document.getElementById("menu-paused");
-				    menu.style.display = "none";
-				    menuPaused.style.display = "block";
-				    vid.pause(); 
+				var vid = document.getElementById("bgvideo");
+				var menu = document.getElementById("menu");
+				var menuPaused = document.getElementById("menu-paused");
+				var playButton = document.getElementById("play-button");
+				menu.style.display = "none";
+				menuPaused.style.display = "block";
+				playButton.style.background = "rgba(18, 21, 29, 0.85)"
+				playButton.style.color = "#FFFFFF"
+				vid.pause(); 
 				}
 				function playvideo() {
 				    var vid = document.getElementById("bgvideo");
