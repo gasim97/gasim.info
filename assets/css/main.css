@@ -1131,21 +1131,21 @@ input, select, textarea {
 
 /*----- Menu Outline -----*/
 .menu-wrap {
-	width: 100%;
-    position: fixed;
+	width: 50%;
     z-index: 2;
+    position: fixed;
 }
 
 .menu {
 	width: auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex;
 }
 
 @media screen and (max-width: 736px) {
     
-    .menu {
-        justify-content: center;
+    .menu-wrap {
+        display: none;
     }
     
 }
@@ -1176,13 +1176,127 @@ input, select, textarea {
 .menu > ul > li > a {
     background: #FFFFFF;
     opacity: 0.85;
+    width: 8em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+}
+
+.menu > ul > li:hover > a, .menu > li:active > a {
+	background: rgba(18, 21, 29, 0.85);
+    color: #FFFFFF;
+}
+
+/*----- Menu-clicked Outline -----*/
+.menu-clicked-wrap {
+	width: 50%;
+    z-index: 2;
+    position: fixed;
+    display: none;
+}
+
+.menu-clicked {
+	width: auto;
+    display: flex;
+    justify-content: flex;
+}
+
+.menu-clicked li {
+	margin: 0px;
+	list-style: none;
+    font-family: FontAwesome;
+}
+
+.menu-clicked a {
+    color: #FFFFFF;
+	transition: all linear 0.4s;
+}
+
+.menu-clicked li:hover > a, .menu-clicked .current-item > a {
+	text-decoration:none;
+}
+
+/*----- Top Level -----*/
+.menu-clicked > ul > li {
+	float: left;
+	display: inline-block;
+	position: relative;
+	font-size: 0.8em;
+}
+
+.menu-clicked > ul > li > a {
+    background: rgba(18, 21, 29, 0.85);
+    opacity: 0.85;
+    width: 8em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+}
+
+.menu-clicked > ul > li:hover > a, .menu-clicked > li:active > a {
+	background: #FFFFFF;
+    color: #000000;
+}
+
+/*----- Menu-right Outline -----*/
+.menu-right-wrap {
+	width: 50%;
+    z-index: 2;
+    position: fixed;
+    right: 0px;
+}
+
+.menu-right {
+	width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 736px) {
+    
+    .menu-right-wrap {
+        width: 100%;
+        right: auto;
+    }
+    .menu-right {
+        justify-content: center;
+    }
+    
+}
+
+.menu-right li {
+	margin: 0px;
+	list-style: none;
+    font-family: FontAwesome;
+}
+
+.menu-right a {
+    color: #000000;
+	transition: all linear 0.4s;
+}
+
+.menu-right li:hover > a, .menu-right .current-item > a {
+	text-decoration:none;
+}
+
+/*----- Top Level -----*/
+.menu-right > ul > li {
+	float: left;
+	display: inline-block;
+	position: relative;
+	font-size: 0.8em;
+}
+
+.menu-right > ul > li > a {
+    background: #FFFFFF;
+    opacity: 0.85;
     width: 12em;
 	padding: 2px;
 	display: inline-block;
     text-align: center;
 }
 
-.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+.menu-right > ul > li:hover > a, .menu-right > ul > .current-item > a {
 	background: rgba(18, 21, 29, 0.85);
     color: #FFFFFF;
 }
