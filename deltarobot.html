@@ -30,7 +30,7 @@
 	<nav class="menu">
 	    <ul class="clearfix">
 		<li><a onclick="togglevideo()">Video | <span class="icon fa-power-off"></span></a></li>
-		<li><a onclick="playvideo()" id="play-button"><span class="icon fa-play"></span></a></li>
+		<li><a2 onclick="playvideo()" id="play-button"><span class="icon fa-play"></span></a2></li>
 	    </ul>
 	</nav>
 	</div>
@@ -167,8 +167,6 @@
 				var playButton = document.getElementById("play-button");
 				menu.style.display = "none";
 				menuPaused.style.display = "block";
-				playButton.style.background = "rgba(18, 21, 29, 0.85)"
-				playButton.style.color = "#FFFFFF"
 				vid.pause(); 
 				}
 				function playvideo() {
