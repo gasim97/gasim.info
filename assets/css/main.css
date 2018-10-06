@@ -1227,7 +1227,7 @@ input, select, textarea {
 }
 
 .menu-clicked a {
-    color: #FFFFFF;
+    color: #000000;
 	transition: all linear 0.4s;
 }
 
@@ -1244,7 +1244,7 @@ input, select, textarea {
 }
 
 .menu-clicked > ul > li > a {
-    background: rgba(18, 21, 29, 0.85);
+    background: #FFFFFF;
     opacity: 0.85;
     width: 8em;
 	padding: 2px;
@@ -1253,8 +1253,8 @@ input, select, textarea {
 }
 
 .menu-clicked > ul > li:hover > a, .menu-clicked > li:active > a {
-	background: #FFFFFF;
-    color: #000000;
+	background: rgba(18, 21, 29, 0.85);
+    color: #FFFFFF;
 }
 
 /*----- Menu-right Outline -----*/
