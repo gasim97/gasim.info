@@ -110,12 +110,8 @@
 				if (vid.style.display === "none") {
 				vid.style.display = "block";
 				menuClicked.style.display = "none";
-				if (vid.paused) {
-				    menuPaused.style.display = "block";
-				}
-				else {
-				    menu.style.display = "block";
-				}
+				menu.style.display = "block";
+                        	vid.play();
 				} else {
 				vid.style.display = "none";
 				menu.style.display = "none";
