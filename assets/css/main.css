@@ -76,6 +76,14 @@ input, select, textarea {
         min-height: 100%;
     }
 
+    @media screen and (max-width: 736px) {
+    
+        #bgvideo {
+            display: none;
+        }
+    
+    }
+
     #deltavideo1 {
         position: fixed;
         height: 14em;
@@ -1218,6 +1226,14 @@ input, select, textarea {
 	width: auto;
     display: flex;
     justify-content: flex;
+}
+
+@media screen and (max-width: 736px) {
+    
+    .menu-clicked-wrap {
+        display: none;
+    }
+    
 }
 
 .menu-clicked li {
