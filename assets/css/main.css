@@ -1157,6 +1157,11 @@ input, select, textarea {
 }
 
 .menu a {
+    color: #FFFFFF;
+	transition: all linear 0.4s;
+}
+
+.menu a2 {
     color: #000000;
 	transition: all linear 0.4s;
 }
@@ -1174,7 +1179,7 @@ input, select, textarea {
 }
 
 .menu > ul > li > a {
-    background: #FFFFFF;
+    background: rgba(18, 21, 29, 0.85);
     opacity: 0.85;
     width: 8em;
 	padding: 2px;
@@ -1183,6 +1188,20 @@ input, select, textarea {
 }
 
 .menu > ul > li:hover > a, .menu > li:active > a {
+	background: #FFFFFF;
+    color: #000000;
+}
+
+.menu > ul > li > a2 {
+    background: #FFFFFF;
+    opacity: 0.85;
+    width: 8em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+}
+
+.menu > ul > li:hover > a2, .menu > li:active > a2 {
 	background: rgba(18, 21, 29, 0.85);
     color: #FFFFFF;
 }
