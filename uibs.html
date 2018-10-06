@@ -18,13 +18,36 @@
 	</video>
     
 	<!-- Menu -->
-	<div class="menu-wrap">
-        	<nav class="menu">
-			<ul class="clearfix">
-				<li><a href="index.html">Home | <span class="icon fa-home"></span></a></li>
-				<li><a href="cv.html">Curriculum Vitae | <span class="icon fa-file-text"></span></a></li>
-			</ul>
-		</nav>
+	<div class="menu-wrap" id="menu">
+	<nav class="menu">
+	    <ul class="clearfix">
+		<li><a onclick="togglevideo()">Video | <span class="icon fa-power-off"></span></a></li>
+		<li><a onclick="pausevideo()"><span class="icon fa-pause"></span></a></li>
+	    </ul>
+	</nav>
+	</div>
+	<div class="menu-wrap" id="menu-paused" style="display: none">
+	<nav class="menu">
+	    <ul class="clearfix">
+		<li><a onclick="togglevideo()">Video | <span class="icon fa-power-off"></span></a></li>
+		<li><a onclick="playvideo()"><span class="icon fa-play"></span></a></li>
+	    </ul>
+	</nav>
+	</div>
+	<div class="menu-clicked-wrap" id="menu-clicked">
+	<nav class="menu-clicked">
+	    <ul class="clearfix">
+		<li><a onclick="togglevideo()">Video | <span class="icon fa-power-off"></span></a></li>
+	    </ul>
+	</nav>
+	</div>
+	<div class="menu-right-wrap">
+	<nav class="menu-right">
+	    <ul class="clearfix">
+		<li><a href="index.html">Home | <span class="icon fa-home"></span></a></li>
+		<li><a href="cv.html">Curriculum Vitae | <span class="icon fa-file-text"></span></a></li>
+	    </ul>
+	</nav>
 	</div>
    
 	<body class="is-preload">
@@ -79,6 +102,41 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function togglevideo() {
+				    var vid = document.getElementById("bgvideo");
+				    var menu = document.getElementById("menu");
+				    var menuPaused = document.getElementById("menu-paused");
+				    var menuClicked = document.getElementById("menu-clicked");
+				    if (vid.style.display === "none") {
+					vid.style.display = "block";
+					menuClicked.style.display = "none";
+					menu.style.display = "block";
+					vid.play();
+				    } else {
+					vid.style.display = "none";
+					menu.style.display = "none";
+					menuPaused.style.display = "none";
+					menuClicked.style.display = "block";
+				    }
+				}
+				function pausevideo() {
+				    var vid = document.getElementById("bgvideo");
+				    var menu = document.getElementById("menu");
+				    var menuPaused = document.getElementById("menu-paused");
+				    menu.style.display = "none";
+				    menuPaused.style.display = "block";
+				    vid.pause(); 
+				}
+				function playvideo() {
+				    var vid = document.getElementById("bgvideo");
+				    var menu = document.getElementById("menu");
+				    var menuPaused = document.getElementById("menu-paused");
+				    menuPaused.style.display = "none";
+				    menu.style.display = "block";
+				    vid.play(); 
+				}
+			</script>
 
 	</body>
 </html>
