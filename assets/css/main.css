@@ -1164,12 +1164,12 @@ input, select, textarea {
     font-family: FontAwesome;
 }
 
-.menu a {
+.menu a, .menu a3 {
     color: #FFFFFF;
 	transition: all linear 0.4s;
 }
 
-.menu a2 {
+.menu a2, .menu a4 {
     color: #000000;
 	transition: all linear 0.4s;
 }
@@ -1195,7 +1195,7 @@ input, select, textarea {
     text-align: center;
 }
 
-.menu > ul > li:hover > a, .menu > li:active > a {
+.menu > ul > li:hover > a, .menu > li:active > a, .menu > ul > li:hover > a3, .menu > li:active > a3 {
 	background: #FFFFFF;
     color: #000000;
 }
@@ -1209,9 +1209,27 @@ input, select, textarea {
     text-align: center;
 }
 
-.menu > ul > li:hover > a2, .menu > li:active > a2 {
+.menu > ul > li:hover > a2, .menu > li:active > a2, .menu > ul > li:hover > a4, .menu > li:active > a4 {
 	background: rgba(18, 21, 29, 0.85);
     color: #FFFFFF;
+}
+
+.menu > ul > li > a3 {
+    background: rgba(18, 21, 29, 0.85);
+    opacity: 0.85;
+    width: 2em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+}
+
+.menu > ul > li > a4 {
+    background: #FFFFFF;
+    opacity: 0.85;
+    width: 2em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
 }
 
 /*----- Menu-clicked Outline -----*/
@@ -1247,6 +1265,11 @@ input, select, textarea {
 	transition: all linear 0.4s;
 }
 
+.menu-clicked a2 {
+    color: #FFFFFF;
+	transition: all linear 0.4s;
+}
+
 .menu-clicked li:hover > a, .menu-clicked .current-item > a {
 	text-decoration:none;
 }
@@ -1271,6 +1294,20 @@ input, select, textarea {
 .menu-clicked > ul > li:hover > a, .menu-clicked > li:active > a {
 	background: rgba(18, 21, 29, 0.85);
     color: #FFFFFF;
+}
+
+.menu-clicked > ul > li > a2 {
+    background: rgba(18, 21, 29, 0.85);
+    opacity: 0.85;
+    width: 2em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
+}
+
+.menu-clicked > ul > li:hover > a2, .menu-clicked > li:active > a2 {
+	background: #FFFFFF;
+    color: #000000;
 }
 
 /*----- Menu-right Outline -----*/
