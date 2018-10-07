@@ -1164,12 +1164,12 @@ input, select, textarea {
     font-family: FontAwesome;
 }
 
-.menu a, .menu a3 {
+.menu a, .menu a2 {
     color: #FFFFFF;
 	transition: all linear 0.4s;
 }
 
-.menu a2, .menu a4 {
+.menu a3 {
     color: #000000;
 	transition: all linear 0.4s;
 }
@@ -1195,38 +1195,29 @@ input, select, textarea {
     text-align: center;
 }
 
-.menu > ul > li:hover > a, .menu > li:active > a, .menu > ul > li:hover > a3, .menu > li:active > a3 {
+.menu > ul > li:hover > a, .menu > li:active > a, .menu > ul > li:hover > a2, .menu > li:active > a2 {
 	background: #FFFFFF;
     color: #000000;
 }
 
-.menu > ul > li > a2 {
-    background: #FFFFFF;
-    opacity: 0.85;
-    width: 8em;
-	padding: 2px;
-	display: inline-block;
-    text-align: center;
-}
-
-.menu > ul > li:hover > a2, .menu > li:active > a2, .menu > ul > li:hover > a4, .menu > li:active > a4 {
+.menu > ul > li:hover > a3, .menu > li:active > a3 {
 	background: rgba(18, 21, 29, 0.85);
     color: #FFFFFF;
 }
 
-.menu > ul > li > a3 {
+.menu > ul > li > a2 {
     background: rgba(18, 21, 29, 0.85);
     opacity: 0.85;
-    width: 2em;
+    width: 2.5em;
 	padding: 2px;
 	display: inline-block;
     text-align: center;
 }
 
-.menu > ul > li > a4 {
+.menu > ul > li > a3 {
     background: #FFFFFF;
     opacity: 0.85;
-    width: 2em;
+    width: 2.5em;
 	padding: 2px;
 	display: inline-block;
     text-align: center;
@@ -1299,7 +1290,7 @@ input, select, textarea {
 .menu-clicked > ul > li > a2 {
     background: rgba(18, 21, 29, 0.85);
     opacity: 0.85;
-    width: 2em;
+    width: 2.5em;
 	padding: 2px;
 	display: inline-block;
     text-align: center;
