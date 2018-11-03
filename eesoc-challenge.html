@@ -23,7 +23,7 @@
 									<input type="search" id="team-1-input" autofocus="autofocus" style="background-color: rgba(18, 21, 29, 0); border: 0em; text-align: center;" required placeholder="> Team Name"/>
 								</div>
                                 <div class="item intro3 span-3">
-                                    <h1>vs</h1>
+                                    <h1 id="vs">vs</h1>
                                 </div>
                                 <div class="item intro span-3">
                                     <input type="search" id="team-2-input" style="background-color: rgba(18, 21, 29, 0); border: 0em; text-align: center;" required placeholder="> Team Name"/>
@@ -225,40 +225,55 @@
                     menu_scoreboard.style.display = "block";
                 }
                 function newTeams() {
-		    document.getElementById("team-1-input").blur();
-                    document.getElementById("team-2-input").blur();
-                    document.getElementById("score1").innerHTML = "0";
-                    document.getElementById("score2").innerHTML = "0";
                     var team_1_input = document.getElementById("team-1-input").value;
-                    document.getElementById("team-1").innerHTML = team_1_input
                     var team_2_input = document.getElementById("team-2-input").value;
-                    document.getElementById("team-2").innerHTML = team_2_input;
-                    document.getElementById("team-1-input").innerHTML = "";
-                    document.getElementById("team-2-input").innerHTML = "";
-                    var team_names = document.getElementById("team-names");
-                    team_names.style.display = "none";
-                    var menu_initial = document.getElementById("menu-initial");
-                    menu_initial.style.display = "none";
-                    var menu_team_names = document.getElementById("menu-team-names");
-                    menu_team_names.style.display = "none";
-                    var scoreboard = document.getElementById("scoreboard");
-                    scoreboard.style.display = "block";
-                    var menu_scoreboard = document.getElementById("menu-scoreboard");
-                    menu_scoreboard.style.display = "block";
-		    document.getElementById("p101").innerHTML = "<p>1</p>";
-                    document.getElementById("p51").innerHTML = "<p>2</p>";
-                    document.getElementById("m51").innerHTML = "<p>3</p>";
-                    document.getElementById("p102").innerHTML = "<p>Q</p>";
-                    document.getElementById("p52").innerHTML = "<p>W</p>";
-                    document.getElementById("m52").innerHTML = "<p>E</p>";
-                    setTimeout(function(){
-			    document.getElementById("p101").innerHTML = "+10";
-			    document.getElementById("p51").innerHTML = "+5";
-			    document.getElementById("m51").innerHTML = "-5";
-			    document.getElementById("p102").innerHTML = "+10";
-			    document.getElementById("p52").innerHTML = "+5";
-			    document.getElementById("m52").innerHTML = "-5";
-                    }, 3000);
+                    if (team_1_input == team_2_input && team_1_input != "") {
+                        document.getElementById("vs").innerHTML = "vs<p><br />Duplicate Team Name</p>";
+                        setTimeout(function(){
+                            document.getElementById("vs").innerHTML = "vs";
+                        }, 2000);
+                    }else {
+                        document.getElementById("team-1-input").blur();
+                        document.getElementById("team-2-input").blur();
+                        document.getElementById("score1").innerHTML = "0";
+                        document.getElementById("score2").innerHTML = "0";
+                        if (team_1_input == "") {
+                            document.getElementById("team-1").innerHTML = "Team 1";
+                        }else {
+                            document.getElementById("team-1").innerHTML = team_1_input;
+                        }
+                        if (team_2_input == "") {
+                            document.getElementById("team-2").innerHTML = "Team 2";
+                        }else {
+                            document.getElementById("team-2").innerHTML = team_2_input;
+                        }
+                        document.getElementById("team-1-input").innerHTML = "";
+                        document.getElementById("team-2-input").innerHTML = "";
+                        var team_names = document.getElementById("team-names");
+                        team_names.style.display = "none";
+                        var menu_initial = document.getElementById("menu-initial");
+                        menu_initial.style.display = "none";
+                        var menu_team_names = document.getElementById("menu-team-names");
+                        menu_team_names.style.display = "none";
+                        var scoreboard = document.getElementById("scoreboard");
+                        scoreboard.style.display = "block";
+                        var menu_scoreboard = document.getElementById("menu-scoreboard");
+                        menu_scoreboard.style.display = "block";
+                        document.getElementById("p101").innerHTML = "+10 <p>1</p>";
+                        document.getElementById("p51").innerHTML = "+5 <p>2</p>";
+                        document.getElementById("m51").innerHTML = "-5 <p>3</p>";
+                        document.getElementById("p102").innerHTML = "+10 <p>Q</p>";
+                        document.getElementById("p52").innerHTML = "+5 <p>W</p>";
+                        document.getElementById("m52").innerHTML = "-5 <p>E</p>";
+                        setTimeout(function(){
+                            document.getElementById("p101").innerHTML = "+10";
+                            document.getElementById("p51").innerHTML = "+5";
+                            document.getElementById("m51").innerHTML = "-5";
+                            document.getElementById("p102").innerHTML = "+10";
+                            document.getElementById("p52").innerHTML = "+5";
+                            document.getElementById("m52").innerHTML = "-5";
+                        }, 3000);
+                    }
                 }
 		
                 var team_1 = document.getElementById("team-1-input");
