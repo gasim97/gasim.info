@@ -247,6 +247,38 @@
                     var menu_scoreboard = document.getElementById("menu-scoreboard");
                     menu_scoreboard.style.display = "block";
                 }
+		
+                var input = document.getElementById("team-1-input");
+                input.addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                        newTeams();
+                  }
+                });
+                
+                var input = document.getElementById("team-2-input");
+                input.addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                        newTeams();
+                  }
+                });
+                
+                var input = document.getElementById("team-1-input");
+                input.addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                        newTeams();
+                  }
+                });
+                
+                var input = document.getElementById("team-2-input");
+                input.addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                        newTeams();
+                  }
+                });
             </script>
 
 	</body>
