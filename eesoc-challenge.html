@@ -261,15 +261,21 @@
 		
                 var team_1 = document.getElementById("team-1-input");
                 team_1.addEventListener("keyup", function(event) {
-                    if (event.keyCode === 13) {
-                        newTeams();
+                    var scoreboard = document.getElementById("scoreboard");
+                    if (scoreboard.style.display == "none") {
+                        if (event.keyCode === 13) {
+                            newTeams();
+                        }
                     }
                 });
                 
                 var team_2 = document.getElementById("team-2-input");
                 team_2.addEventListener("keyup", function(event) {
-                    if (event.keyCode === 13) {
-                        newTeams();
+                    var scoreboard = document.getElementById("scoreboard");
+                    if (scoreboard.style.display == "none") {
+                        if (event.keyCode === 13) {
+                            newTeams();
+                        }
                     }
                 });
 		    
