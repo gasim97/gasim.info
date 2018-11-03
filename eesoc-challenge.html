@@ -61,23 +61,23 @@
                         
                             <div class="items">
                                 <div class="item intro2 span-4" onclick="p101()">
-									<h1>+10</h1>
+									<h1 id="p101">+10</h1>
 								</div>
                                 <div class="item intro2 span-4" onclick="p51()">
-									<h1>+5</h1>
+									<h1 id="p51">+5</h1>
 								</div>
                                 <div class="item intro2 span-4" onclick="m51()">
-									<h1>-5</h1>
+									<h1 id="m51">-5</h1>
 								</div>
                                 <div class="item intro3 span-5"></div>
                                 <div class="item intro2 span-4" onclick="p102()">
-									<h1>+10</h1>
+									<h1 id="p102">+10</h1>
 								</div>
                                 <div class="item intro2 span-4" onclick="p52()">
-									<h1>+5</h1>
+									<h1 id="p52">+5</h1>
 								</div>
                                 <div class="item intro2 span-4" onclick="m52()">
-									<h1>-5</h1>
+									<h1 id="m52">-5</h1>
 								</div>
 							</div>
                         </div>
@@ -243,6 +243,20 @@
                     scoreboard.style.display = "block";
                     var menu_scoreboard = document.getElementById("menu-scoreboard");
                     menu_scoreboard.style.display = "block";
+		    document.getElementById("p101").innerHTML = "<p>1</p>";
+                    document.getElementById("p51").innerHTML = "<p>2</p>";
+                    document.getElementById("m51").innerHTML = "<p>3</p>";
+                    document.getElementById("p102").innerHTML = "<p>Q</p>";
+                    document.getElementById("p52").innerHTML = "<p>W</p>";
+                    document.getElementById("m52").innerHTML = "<p>E</p>";
+                    setTimeout(function(){
+			    document.getElementById("p101").innerHTML = "+10";
+			    document.getElementById("p51").innerHTML = "+5";
+			    document.getElementById("m51").innerHTML = "-5";
+			    document.getElementById("p102").innerHTML = "+10";
+			    document.getElementById("p52").innerHTML = "+5";
+			    document.getElementById("m52").innerHTML = "-5";
+                    }, 3000);
                 }
 		
                 var team_1 = document.getElementById("team-1-input");
