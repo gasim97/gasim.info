@@ -1334,7 +1334,7 @@ input, select, textarea {
     z-index: 2;
     position: fixed;
     right: 0px;
-    padding-top: 2em;
+    padding-top: 3em;
 }
 
 .menu-right {
