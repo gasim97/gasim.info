@@ -1275,7 +1275,7 @@ input, select, textarea {
 .menu-clicked li {
 	margin: 0px;
 	list-style: none;
-    font-family: FontAwesome;
+    font-family: 'Source Sans Pro';
 }
 
 .menu-clicked a {
@@ -1357,7 +1357,7 @@ input, select, textarea {
 
 .menu-right li {
 	list-style: none;
-    font-family: FontAwesome;
+    font-family: 'Source Sans Pro';
 }
 
 .menu-right a {
