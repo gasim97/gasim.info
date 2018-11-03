@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>EESoc Challenge Scoreboard</title>
+        <link rel="icon" href="images/siteicon.png">
+        <link rel="mask-icon" href="images/sitemaskicon.svg" color="#000000">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/eesocmain.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+    
+    <div class="menu-right-wrap" id="menu-initial">
+        <nav class="menu-right">
+            <ul class="clearfix">
+                <li><a onclick="newTeams()">Sumbit Team Names</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="menu-right-wrap" id="menu-scoreboard" style="display: none">
+        <nav class="menu-right">
+            <ul class="clearfix">
+                <li><a onclick="reset()">Reset Score</a></li>
+                <li><a onclick="changeTeams()">Change Teams</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+     <div class="menu-right-wrap" id="menu-team-names" style="display: none">
+        <nav class="menu-right">
+            <ul class="clearfix">
+                <li><a onclick="newTeams()">Sumbit New Teams</a></li>
+                <li><a onclick="back()">Back to Scoreboard</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+                    <section id="main">
+
+						<!-- Items -->
+                            <div class="items" id="team-names">
+                                <div id="div-1" class="item intro span-3">
+									<input type="search" id="team-1-input" pattern="[0-9a-zA-Z\xe0-\xef\x80-\xbf._-]+\s*" style="background-color: rgba(18, 21, 29, 0); border: 0em; text-align: center;" required placeholder="< Team 1 Name >"/>
+								</div>
+                                <div class="item intro3 span-3">
+                                    <h1>vs</h1>
+                                </div>
+                                <div class="item intro span-3">
+                                    <input type="search" id="team-2-input" style="background-color: rgba(18, 21, 29, 0); border: 0em; text-align: center;" required placeholder="< Team 2 Name >"/>
+								</div>
+							</div>
+                            
+                            <!-- Items -->
+                        <div id="scoreboard"  style="display: none">
+                            <div class="items" id="scoreboard">
+                                <div class="item intro span-3">
+									<p id="team-1">Team 1</p>
+								</div>
+                                <div class="item intro3 span-3"></div>
+                                <div class="item intro span-3">
+                                    <p id="team-2">Team 2</p>
+								</div>
+							</div>
+                        
+				            <div class="items">
+                                <div class="item intro span-2">
+									<h1 id="score1">0</h1>
+								</div>
+                                <div class="item intro3 span-2">
+                                    <h1>vs</h1>
+                                </div>
+                                <div class="item intro span-2">
+									<h1 id="score2">0</h1>
+								</div>
+							</div>
+                                <div class="item intro3 span-5"></div>
+                            <div class="items">
+                                
+							</div>
+                        
+                            <div class="items">
+                                <div class="item intro2 span-4" onclick="p101()">
+									<h1>+10</h1>
+								</div>
+                                <div class="item intro2 span-4" onclick="p51()">
+									<h1>+5</h1>
+								</div>
+                                <div class="item intro2 span-4" onclick="m51()">
+									<h1>-5</h1>
+								</div>
+                                <div class="item intro3 span-5"></div>
+                                <div class="item intro2 span-4" onclick="p102()">
+									<h1>+10</h1>
+								</div>
+                                <div class="item intro2 span-4" onclick="p52()">
+									<h1>+5</h1>
+								</div>
+                                <div class="item intro2 span-4" onclick="m52()">
+									<h1>-5</h1>
+								</div>
+							</div>
+                        </div>
+                        
+					</section>    
+
+				<!-- Footer -->
+					<section id="footer">
+						<section>
+							<p1>EESoc Challenge | 2018</p1>
+						</section>
+						<section>
+							<ul class="copyright">
+								<!-- <li>&copy; Gasim Gasim</li><li>2018</li> -->
+							</ul>
+						</section>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script>
+                function p101() {
+                    var score_node = document.getElementById("score1");
+                    var score_string = score_node.textContent;
+                    var score = parseInt(score_string)
+                    score = score + 10;
+                    result = score.toString() + " <p1> +10</p1>";
+                    document.getElementById("score1").innerHTML = result;
+                    setTimeout(function(){
+                        result = score.toString()
+                        document.getElementById("score1").innerHTML = result;
+                    }, 500);
+                }
+                function p51() {
+                    var score_node = document.getElementById("score1");
+                    var score_string = score_node.textContent;
+                    var score = parseInt(score_string)
+                    score = score + 5;
+                    result = score.toString() + " <p1> +5</p1>";
+                    document.getElementById("score1").innerHTML = result;
+                    setTimeout(function(){
+                        result = score.toString()
+                        document.getElementById("score1").innerHTML = result;
+                    }, 500);
+                }
+                function m51() {
+                    var score_node = document.getElementById("score1");
+                    var score_string = score_node.textContent;
+                    var score = parseInt(score_string)
+                    score = score - 5;
+                    result = score.toString() + " <p2> -5</p2>";
+                    document.getElementById("score1").innerHTML = result;
+                    setTimeout(function(){
+                        result = score.toString()
+                        document.getElementById("score1").innerHTML = result;
+                    }, 500);
+                }
+                function p102() {
+                    var score_node = document.getElementById("score2");
+                    var score_string = score_node.textContent;
+                    var score = parseInt(score_string)
+                    score = score + 10;
+                    result = score.toString() + " <p1> +10</p1>";
+                    document.getElementById("score2").innerHTML = result;
+                    setTimeout(function(){
+                        result = score.toString()
+                        document.getElementById("score2").innerHTML = result;
+                    }, 500);
+                }
+                function p52() {
+                    var score_node = document.getElementById("score2");
+                    var score_string = score_node.textContent;
+                    var score = parseInt(score_string)
+                    score = score + 5;
+                    result = score.toString() + " <p1> +5</p1>";
+                    document.getElementById("score2").innerHTML = result;
+                    setTimeout(function(){
+                        result = score.toString()
+                        document.getElementById("score2").innerHTML = result;
+                    }, 500);
+                }
+                function m52() {
+                    var score_node = document.getElementById("score2");
+                    var score_string = score_node.textContent;
+                    var score = parseInt(score_string)
+                    score = score - 5;
+                    result = score.toString() + " <p2> -5</p2>";
+                    document.getElementById("score2").innerHTML = result;
+                    setTimeout(function(){
+                        result = score.toString()
+                        document.getElementById("score2").innerHTML = result;
+                    }, 1000);
+                }
+                function reset() {
+                    document.getElementById("score1").innerHTML = "0";
+                    document.getElementById("score2").innerHTML = "0";
+                }
+                function changeTeams() {
+                    var scoreboard = document.getElementById("scoreboard");
+                    scoreboard.style.display = "none";
+                    var menu_scoreboard = document.getElementById("menu-scoreboard");
+                    menu_scoreboard.style.display = "none";
+                    var team_names = document.getElementById("team-names");
+                    team_names.style.display = "block";
+                    var menu_team_names = document.getElementById("menu-team-names");
+                    menu_team_names.style.display = "block";
+                }
+                function back() {
+                    var team_names = document.getElementById("team-names");
+                    team_names.style.display = "none";
+                    var menu_team_names = document.getElementById("menu-team-names");
+                    menu_team_names.style.display = "none";
+                    var scoreboard = document.getElementById("scoreboard");
+                    scoreboard.style.display = "block";
+                    var menu_scoreboard = document.getElementById("menu-scoreboard");
+                    menu_scoreboard.style.display = "block";
+                }
+                function newTeams() {
+                    document.getElementById("score1").innerHTML = "0";
+                    document.getElementById("score2").innerHTML = "0";
+                    var team_1_input = document.getElementById("team-1-input").value;
+                    document.getElementById("team-1").innerHTML = team_1_input
+                    var team_2_input = document.getElementById("team-2-input").value;
+                    document.getElementById("team-2").innerHTML = team_2_input;
+                    document.getElementById("team-1-input").innerHTML = "";
+                    document.getElementById("team-2-input").innerHTML = "";
+                    var team_names = document.getElementById("team-names");
+                    team_names.style.display = "none";
+                    var menu_initial = document.getElementById("menu-initial");
+                    menu_initial.style.display = "none";
+                    var menu_team_names = document.getElementById("menu-team-names");
+                    menu_team_names.style.display = "none";
+                    var scoreboard = document.getElementById("scoreboard");
+                    scoreboard.style.display = "block";
+                    var menu_scoreboard = document.getElementById("menu-scoreboard");
+                    menu_scoreboard.style.display = "block";
+                }
+            </script>
+
+	</body>
+</html>
