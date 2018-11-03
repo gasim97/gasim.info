@@ -623,11 +623,13 @@ input, select, textarea {
 				}
 
 				#main .item.intro3 p {
-                    text-align: right;
-					font-size: 0.5em;
-					line-height: 1.5em;
-					margin: 0.5em 0 0 0;
-					opacity: 0.65;
+                    			font-family: FontAwesome;
+					    font-size: 0.2em;
+					    color: crimson;
+					    font-weight: bolder;
+					    align-items: center;
+					    text-align: center;
+					opacity: 1;
 				}
 
 			#main .item.thumb {
