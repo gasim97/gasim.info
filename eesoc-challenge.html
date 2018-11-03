@@ -258,6 +258,26 @@
                         newTeams();
                     }
                 });
+		    
+		window.onkeyup = function(e) {
+                    var scoreboard = document.getElementById("scoreboard");
+                    if (scoreboard.style.display == "block") {
+                        var key = e.keyCode ? e.keyCode : e.which;
+                        if (key == 81 || key == 49) {
+                            p101();
+                        }else if (key == 87 || key == 50) {
+                            p51();
+                        }else if (key == 69 || key == 51) {
+                            m51();
+                        }else if (key == 73 || key == 56) {
+                            p102();
+                        }else if (key == 79 || key == 57) {
+                            p52();
+                        }else if (key == 80 || key == 48) {
+                            m52();
+                        }
+                    }
+                }
             </script>
 
 	</body>
