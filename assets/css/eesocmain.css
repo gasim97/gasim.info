@@ -1188,7 +1188,7 @@ input, select, textarea {
 .menu li {
 	margin: 0px;
 	list-style: none;
-    font-family: FontAwesome;
+    font-family: 'Source Sans Pro';
 }
 
 .menu a, .menu a2 {
