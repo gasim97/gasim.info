@@ -248,36 +248,18 @@
                     menu_scoreboard.style.display = "block";
                 }
 		
-                var input = document.getElementById("team-1-input");
-                input.addEventListener("keyup", function(event) {
-                    event.preventDefault();
+                var team_1 = document.getElementById("team-1-input");
+                team_1.addEventListener("keyup", function(event) {
                     if (event.keyCode === 13) {
                         newTeams();
-                  }
+                    }
                 });
                 
-                var input = document.getElementById("team-2-input");
-                input.addEventListener("keyup", function(event) {
-                    event.preventDefault();
+                var team_2 = document.getElementById("team-2-input");
+                team_2.addEventListener("keyup", function(event) {
                     if (event.keyCode === 13) {
                         newTeams();
-                  }
-                });
-                
-                var input = document.getElementById("team-1-input");
-                input.addEventListener("keyup", function(event) {
-                    event.preventDefault();
-                    if (event.keyCode === 13) {
-                        newTeams();
-                  }
-                });
-                
-                var input = document.getElementById("team-2-input");
-                input.addEventListener("keyup", function(event) {
-                    event.preventDefault();
-                    if (event.keyCode === 13) {
-                        newTeams();
-                  }
+                    }
                 });
             </script>
 
