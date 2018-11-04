@@ -101,7 +101,16 @@
 						    <div class="menu-right-wrap" id="menu-scoreboard" style="display: none">
 							<nav class="menu-right">
 							    <ul class="clearfix">
-								<li><a onclick="reset()">Reset Score</a></li>
+								<li><a onclick="menu_scoreboard_2()">Reset Score</a></li>
+								<li><a onclick="changeTeams()">Change Teams</a></li>
+							    </ul>
+							</nav>
+						    </div>
+							
+						    <div class="menu-right-wrap" id="menu-scoreboard-2" style="display: none">
+							<nav class="menu-right">
+							    <ul class="clearfix">
+								<li><a onclick="reset()">Are You Sure?</a></li>
 								<li><a onclick="changeTeams()">Change Teams</a></li>
 							    </ul>
 							</nav>
@@ -199,9 +208,23 @@
                         document.getElementById("score2").innerHTML = result;
                     }, 500);
                 }
+                function menu_scoreboard_2() {
+                    var menu_scoreboard = document.getElementById("menu-scoreboard");
+                    menu_scoreboard.style.display = "none";
+                    var menu_scoreboard_2 = document.getElementById("menu-scoreboard-2");
+                    menu_scoreboard_2.style.display = "block";
+                    setTimeout(function(){
+                        menu_scoreboard_2.style.display = "none";
+                        menu_scoreboard.style.display = "block";
+                    }, 5000);
+                }
                 function reset() {
                     document.getElementById("score1").innerHTML = "0";
                     document.getElementById("score2").innerHTML = "0";
+                    var menu_scoreboard_2 = document.getElementById("menu-scoreboard-2");
+                    menu_scoreboard_2.style.display = "none";
+                    var menu_scoreboard = document.getElementById("menu-scoreboard");
+                    menu_scoreboard.style.display = "block";
                 }
                 function changeTeams() {
                     var scoreboard = document.getElementById("scoreboard");
