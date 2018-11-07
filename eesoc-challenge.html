@@ -231,6 +231,8 @@
                     scoreboard.style.display = "none";
                     var menu_scoreboard = document.getElementById("menu-scoreboard");
                     menu_scoreboard.style.display = "none";
+		    var menu_scoreboard_2 = document.getElementById("menu-scoreboard-2");
+                    menu_scoreboard_2.style.display = "none";
                     var team_names = document.getElementById("team-names");
                     team_names.style.display = "block";
                     var menu_team_names = document.getElementById("menu-team-names");
@@ -323,17 +325,17 @@
                     var scoreboard = document.getElementById("scoreboard");
                     if (scoreboard.style.display == "block") {
                         var key = e.keyCode ? e.keyCode : e.which;
-                        if (key == 73 || key == 49) {
+                        if (key == 80 || key == 49) {
                             p101();
-                        }else if (key == 79 || key == 50) {
+                        }else if (key == 219 || key == 50) {
                             p51();
-                        }else if (key == 80 || key == 51) {
+                        }else if (key == 221 || key == 51) {
                             m51();
-                        }else if (key == 81 || key == 56) {
+                        }else if (key == 81 || key == 48) {
                             p102();
-                        }else if (key == 87 || key == 57) {
+                        }else if (key == 87 || key == 189) {
                             p52();
-                        }else if (key == 69 || key == 48) {
+                        }else if (key == 69 || key == 187) {
                             m52();
                         }
                     }
