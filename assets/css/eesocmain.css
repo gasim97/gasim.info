@@ -429,57 +429,32 @@ input, select, textarea {
             border-bottom-left-radius: 10px;
 		}
 
+			#main .item {
+				height: 14em;
+			}
+
 			#main .item.span-1 {
-				width: 20em;
+				width: 17em;
 			}
 
 			#main .item.span-2 {
-				width: 30em;
+				width: 25.5em;
 			}
 
 			#main .item.span-3 {
-				width: 30em;
+				height: 7em;
+				width: 25.5em;
 			}
-            
-            #main .item.span-4 {
-                height: 45em;
-                width: 60em;
-            }
 
-            #main .item.span-5 {
-                height: 32em;
-                width: 20em;
-            }
+			#main .item.span-4 {
+				height: 3em;
+				width: 8em;   
+			}
 
-            #main .item.span-6 {
-                height: 38em;
-                width: 20em;
-            }
-
-            #main .item.span-7 {
-                height: 38em;
-                width: 30em;
-            }
-
-            #main .item.span-8 {
-                height: 36em;
-                width: 30em;
-            }
-
-            #main .item.span-9 {
-                height: 36em;
-                width: 20em;
-            }
-
-            #main .item.span-10 {
-                height: 36em;
-                width: 40em;
-            }
-
-            #main .item.span-11 {
-                height: 45em;
-                width: 30em;
-            }
+			#main .item.span-5 {
+				height: 3em;
+				width: 25.5em;
+			}
 
 			#main .item.intro {
 				background-color: rgba(18, 21, 29, 0.05);
@@ -786,51 +761,20 @@ input, select, textarea {
 				}
 
 				#main .item.span-3 {
-                    height: 7em;
+                    			height: 7em;
 					width: 25.5em;
 				}
                 
-                #main .item.span-4 {
-                    height: 3em;
+                		#main .item.span-4 {
+                    			height: 3em;
 					width: 8em;   
 				}
             
-                #main .item.span-5 {
-                    height: 3em;
+                		#main .item.span-5 {
+                    			height: 3em;
 					width: 25.5em;
 				}
                 
-                #main .item.span-6 {
-                    height: 33.25em;
-					width: 17em;
-				}
-            
-                #main .item.span-7 {
-                    height: 33.25em;
-                    width: 25.5em;
-                }
-            
-                #main .item.span-8 {
-                    height: 31.5em;
-                    width: 25.5em;
-                }
-            
-                #main .item.span-9 {
-                    height: 31.5em;
-                    width: 17em;
-                }
-            
-                #main .item.span-10 {
-                    height: 31.5em;
-                    width: 34em;
-                }
-            
-                #main .item.span-11 {
-                    height: 39em;
-                    width: 25.5em;
-                }
-                
-
 		}
 
 		@media screen and (max-width: 736px) {
