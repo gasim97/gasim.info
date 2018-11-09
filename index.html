@@ -198,30 +198,30 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 				function togglevideo() {
-				var vid = document.getElementById("bgvideo");
-				var menu = document.getElementById("menu");
-				var menuPaused = document.getElementById("menu-paused");
-				var menuClicked = document.getElementById("menu-clicked");
-				if (vid.style.display === "none") {
-				vid.style.display = "block";
-				menuClicked.style.display = "none";
-				menu.style.display = "block";
-                        	vid.play();
-				} else {
-				vid.style.display = "none";
-				menu.style.display = "none";
-				menuPaused.style.display = "none";
-				menuClicked.style.display = "block";
-				}
+					var vid = document.getElementById("bgvideo");
+					var menu = document.getElementById("menu");
+					var menuPaused = document.getElementById("menu-paused");
+					var menuClicked = document.getElementById("menu-clicked");
+					if (vid.style.display === "none") {
+						vid.style.display = "block";
+						menuClicked.style.display = "none";
+						menu.style.display = "block";
+						vid.play();
+					} else {
+						vid.style.display = "none";
+						menu.style.display = "none";
+						menuPaused.style.display = "none";
+						menuClicked.style.display = "block";
+					}
 				}
 				function pausevideo() {
-				var vid = document.getElementById("bgvideo");
-				var menu = document.getElementById("menu");
-				var menuPaused = document.getElementById("menu-paused");
-				var playButton = document.getElementById("play-button");
-				menu.style.display = "none";
-				menuPaused.style.display = "block";
-				vid.pause(); 
+					var vid = document.getElementById("bgvideo");
+					var menu = document.getElementById("menu");
+					var menuPaused = document.getElementById("menu-paused");
+					var playButton = document.getElementById("play-button");
+					menu.style.display = "none";
+					menuPaused.style.display = "block";
+					vid.pause(); 
 				}
 				function playvideo() {
 				    var vid = document.getElementById("bgvideo");
@@ -232,38 +232,51 @@
 				    vid.play(); 
 				}
 				function hidemenu() {
-				var vid = document.getElementById("bgvideo");
-				var hiddenmenu = document.getElementById("menu-hidden");
-				if (vid.style.display === "none") {
-				var menuClicked = document.getElementById("menu-clicked");
-				menuClicked.style.display = "none";
-				}
-				else if (vid.paused) {
-				var menuPaused = document.getElementById("menu-paused");
-				menuPaused.style.display = "none";
-				}
-				else {
-				var menu = document.getElementById("menu");
-				menu.style.display = "none";
-				}
-				hiddenmenu.style.display = "block";
+					var vid = document.getElementById("bgvideo");
+					var hiddenmenu = document.getElementById("menu-hidden");
+					if (vid.style.display === "none") {
+						var menuClicked = document.getElementById("menu-clicked");
+						menuClicked.style.display = "none";
+					} else if (vid.paused) {
+						var menuPaused = document.getElementById("menu-paused");
+						menuPaused.style.display = "none";
+					} else {
+						var menu = document.getElementById("menu");
+						menu.style.display = "none";
+					}
+						hiddenmenu.style.display = "block";
 				}
 				function showmenu() {
-				var vid = document.getElementById("bgvideo");
-				var hiddenmenu = document.getElementById("menu-hidden");
-				hiddenmenu.style.display = "none";
-				if (vid.style.display === "none") {
-				var menuClicked = document.getElementById("menu-clicked");
-				menuClicked.style.display = "block";
+					var vid = document.getElementById("bgvideo");
+					var hiddenmenu = document.getElementById("menu-hidden");
+					hiddenmenu.style.display = "none";
+					if (vid.style.display === "none") {
+						var menuClicked = document.getElementById("menu-clicked");
+						menuClicked.style.display = "block";
+					} else if (vid.paused) {
+						var menuPaused = document.getElementById("menu-paused");
+						menuPaused.style.display = "block";
+					} else {
+						var menu = document.getElementById("menu");
+						menu.style.display = "block";
+					}
 				}
-				else if (vid.paused) {
-				var menuPaused = document.getElementById("menu-paused");
-				menuPaused.style.display = "block";
-				}
-				else {
-				var menu = document.getElementById("menu");
-				menu.style.display = "block";
-				}
+				function flash() {
+				    setTimeout(function() {
+					var projects = document.getElementById("projects");
+					var experience = document.getElementById("experience");
+					projects.style.animation = "flash linear 2s infinite";
+					projects.style["-webkit-animation"] = "flash linear 2s infinite";
+					experience.style.animation = "flash linear 2s infinite";
+					experience.style["-webkit-animation"] = "flash linear 2s infinite";
+				    }, 4000);
+				    setTimeout(function() {
+					projects.style.animation = "";
+					projects.style["-webkit-animation"] = "";
+					experience.style.animation = "";
+					experience.style["-webkit-animation"] = "";
+
+				    }, 8000);
 				}
 			</script>
 
