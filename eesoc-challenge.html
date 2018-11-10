@@ -115,6 +115,15 @@
 							    </ul>
 							</nav>
 						    </div>
+                            
+						    <div class="menu-right-wrap" id="menu-scoreboard-3" style="display: none">
+							<nav class="menu-right">
+							    <ul class="clearfix">
+								<li><a>Score Reset</a></li>
+								<li><a onclick="changeTeams()">Change Teams</a></li>
+							    </ul>
+							</nav>
+						    </div>
 
 						     <div class="menu-right-wrap" id="menu-team-names" style="display: none">
 							<nav class="menu-right">
@@ -223,21 +232,28 @@
                     document.getElementById("score2").innerHTML = "0";
                     var menu_scoreboard_2 = document.getElementById("menu-scoreboard-2");
                     menu_scoreboard_2.style.display = "none";
-                    var menu_scoreboard = document.getElementById("menu-scoreboard");
-                    menu_scoreboard.style.display = "block";
+                    var menu_scoreboard_3 = document.getElementById("menu-scoreboard-3");
+                    menu_scoreboard_3.style.display = "block";
+                    setTimeout(function(){
+                        menu_scoreboard_3.style.display = "none";
+                        var menu_scoreboard = document.getElementById("menu-scoreboard");
+                        menu_scoreboard.style.display = "block";
+                    }, 2000);
                 }
                 function changeTeams() {
                     var scoreboard = document.getElementById("scoreboard");
                     scoreboard.style.display = "none";
                     var menu_scoreboard = document.getElementById("menu-scoreboard");
                     menu_scoreboard.style.display = "none";
-		    var menu_scoreboard_2 = document.getElementById("menu-scoreboard-2");
+                    var menu_scoreboard_2 = document.getElementById("menu-scoreboard-2");
                     menu_scoreboard_2.style.display = "none";
+                    var menu_scoreboard_3 = document.getElementById("menu-scoreboard-3");
+                    menu_scoreboard_3.style.display = "none";
                     var team_names = document.getElementById("team-names");
                     team_names.style.display = "block";
                     var menu_team_names = document.getElementById("menu-team-names");
                     menu_team_names.style.display = "block";
-		    document.getElementById("team-1-input").focus();
+                    document.getElementById("team-1-input").focus();
                 }
                 function back() {
                     var team_names = document.getElementById("team-names");
