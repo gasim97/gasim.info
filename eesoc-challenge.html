@@ -103,15 +103,7 @@
 							    <ul class="clearfix">
 								<li id="reset"><a onclick="confirm_reset()">Reset Score</a></li>
 								<li id="confirm-reset" style="display: none"><a onclick="reset()">Are You Sure?</a></li>
-								<li><a onclick="changeTeams()">Change Teams</a></li>
-							    </ul>
-							</nav>
-						    </div>
-
-						    <div class="menu-right-wrap" id="menu-scoreboard-2" style="display: none">
-							<nav class="menu-right">
-							    <ul class="clearfix">
-								<li><a2>Score Reset</a2></li>
+								<li id="score-reset" style="display: none"><a2>Score Reset</a2></li>
 								<li><a onclick="changeTeams()">Change Teams</a></li>
 							    </ul>
 							</nav>
@@ -137,76 +129,153 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
             <script>
+                var time_out;
+                var time_out_score_1;
+                var time_out_score_2;
+                var total_1 = 0;
+                var total_2 = 0;
                 function p101() {
+                    if (time_out_score_1 > 0) {
+                        total_1 = total_1 + 10;
+                    } else {
+                        total_1 = 10;
+                    }
+                    var total_string;
+                    if (total_1 >= 0) {
+                        total_string = " <p1> +" + total_1 + "</p1>"
+                    } else {
+                        total_string = " <p2> " + total_1 + "</p2>"
+                    }
                     var score_node = document.getElementById("score1");
                     var score_string = score_node.textContent;
                     var score = parseInt(score_string)
                     score = score + 10;
-                    result = score.toString() + " <p1> +10</p1>";
-                    document.getElementById("score1").innerHTML = result;
-                    setTimeout(function(){
-                        result = score.toString()
+                    result = score.toString();
+                    document.getElementById("score1").innerHTML = result + " " + total_string;
+                    clearTimeout(time_out_score_1);
+                    time_out_score_1 = setTimeout(function(){
                         document.getElementById("score1").innerHTML = result;
+                        total_1 = 0;
                     }, 500);
                 }
                 function p51() {
+                    if (time_out_score_1 > 0) {
+                        total_1 = total_1 + 5;
+                    } else {
+                        total_1 = 5;
+                    }
+                    var total_string;
+                    if (total_1 >= 0) {
+                        total_string = " <p1> +" + total_1 + "</p1>"
+                    } else {
+                        total_string = " <p2> " + total_1 + "</p2>"
+                    }
                     var score_node = document.getElementById("score1");
                     var score_string = score_node.textContent;
                     var score = parseInt(score_string)
                     score = score + 5;
-                    result = score.toString() + " <p1> +5</p1>";
-                    document.getElementById("score1").innerHTML = result;
-                    setTimeout(function(){
-                        result = score.toString()
+                    result = score.toString();
+                    document.getElementById("score1").innerHTML = result + " " + total_string;
+                    clearTimeout(time_out_score_1);
+                    time_out_score_1 = setTimeout(function(){
                         document.getElementById("score1").innerHTML = result;
+                        total_1 = 0;
                     }, 500);
                 }
                 function m51() {
+                    if (time_out_score_1 > 0) {
+                        total_1 = total_1 - 5;
+                    } else {
+                        total_1 = -5;
+                    }
+                    var total_string;
+                    if (total_1 >= 0) {
+                        total_string = " <p1> +" + total_1 + "</p1>"
+                    } else {
+                        total_string = " <p2> " + total_1 + "</p2>"
+                    }
                     var score_node = document.getElementById("score1");
                     var score_string = score_node.textContent;
                     var score = parseInt(score_string)
                     score = score - 5;
-                    result = score.toString() + " <p2> -5</p2>";
-                    document.getElementById("score1").innerHTML = result;
-                    setTimeout(function(){
-                        result = score.toString()
+                    result = score.toString();
+                    document.getElementById("score1").innerHTML = result + " " + total_string;
+                    clearTimeout(time_out_score_1);
+                    time_out_score_1 = setTimeout(function(){
                         document.getElementById("score1").innerHTML = result;
+                        total_1 = 0;
                     }, 500);
                 }
                 function p102() {
+                    if (time_out_score_2 > 0) {
+                        total_2 = total_2 + 10;
+                    } else {
+                        total_2 = 10;
+                    }
+                    var total_string;
+                    if (total_2 >= 0) {
+                        total_string = " <p1> +" + total_2 + "</p1>"
+                    } else {
+                        total_string = " <p2> " + total_2 + "</p2>"
+                    }
                     var score_node = document.getElementById("score2");
                     var score_string = score_node.textContent;
                     var score = parseInt(score_string)
                     score = score + 10;
-                    result = score.toString() + " <p1> +10</p1>";
-                    document.getElementById("score2").innerHTML = result;
-                    setTimeout(function(){
-                        result = score.toString()
+                    result = score.toString();
+                    document.getElementById("score2").innerHTML = result + " " + total_string;
+                    clearTimeout(time_out_score_2);
+                    time_out_score_2 = setTimeout(function(){
                         document.getElementById("score2").innerHTML = result;
+                        total_2 = 0;
                     }, 500);
                 }
                 function p52() {
+                    if (time_out_score_2 > 0) {
+                        total_2 = total_2 + 5;
+                    } else {
+                        total_2 = 5;
+                    }
+                    var total_string;
+                    if (total_2 >= 0) {
+                        total_string = " <p1> +" + total_2 + "</p1>"
+                    } else {
+                        total_string = " <p2> " + total_2 + "</p2>"
+                    }
                     var score_node = document.getElementById("score2");
                     var score_string = score_node.textContent;
                     var score = parseInt(score_string)
                     score = score + 5;
-                    result = score.toString() + " <p1> +5</p1>";
-                    document.getElementById("score2").innerHTML = result;
-                    setTimeout(function(){
-                        result = score.toString()
+                    result = score.toString();
+                    document.getElementById("score2").innerHTML = result + " " + total_string;
+                    clearTimeout(time_out_score_2);
+                    time_out_score_2 = setTimeout(function(){
                         document.getElementById("score2").innerHTML = result;
+                        total_2 = 0;
                     }, 500);
                 }
                 function m52() {
+                    if (time_out_score_2 > 0) {
+                        total_2 = total_2 - 5;
+                    } else {
+                        total_2 = -5;
+                    }
+                    var total_string;
+                    if (total_2 >= 0) {
+                        total_string = " <p1> +" + total_2 + "</p1>"
+                    } else {
+                        total_string = " <p2> " + total_2 + "</p2>"
+                    }
                     var score_node = document.getElementById("score2");
                     var score_string = score_node.textContent;
                     var score = parseInt(score_string)
                     score = score - 5;
-                    result = score.toString() + " <p2> -5</p2>";
-                    document.getElementById("score2").innerHTML = result;
-                    setTimeout(function(){
-                        result = score.toString()
+                    result = score.toString();
+                    document.getElementById("score2").innerHTML = result + " " + total_string;
+                    clearTimeout(time_out_score_2);
+                    time_out_score_2 = setTimeout(function(){
                         document.getElementById("score2").innerHTML = result;
+                        total_2 = 0;
                     }, 500);
                 }
                 function confirm_reset() {
@@ -214,7 +283,7 @@
                     reset.style.display = "none";
                     var confirm_reset = document.getElementById("confirm-reset");
                     confirm_reset.style.display = "block";
-                    setTimeout(function(){
+                    time_out = setTimeout(function(){
                         confirm_reset.style.display = "none";
                         reset.style.display = "block";
                     }, 5000);
@@ -222,29 +291,27 @@
                 function reset() {
                     document.getElementById("score1").innerHTML = "0";
                     document.getElementById("score2").innerHTML = "0";
-                    var menu_scoreboard = document.getElementById("menu-scoreboard");
-                    menu_scoreboard.style.display = "none";
-                    var menu_scoreboard_2 = document.getElementById("menu-scoreboard-2");
-                    menu_scoreboard_2.style.display = "block";
-                    setTimeout(function(){
-                        menu_scoreboard_2.style.display = "none";
-                        var confirm_reset = document.getElementById("confirm-reset");
-                        confirm_reset.style.display = "none";
-                        var menu_scoreboard = document.getElementById("menu-scoreboard");
-                        var reset = document.getElementById("reset");
-                        menu_scoreboard.style.display = "block";
+                    var confirm_reset = document.getElementById("confirm-reset");
+                    confirm_reset.style.display = "none";
+                    var score_reset = document.getElementById("score-reset");
+                    score_reset.style.display = "block";
+                    var reset = document.getElementById("reset");
+                    clearTimeout(time_out);
+                    time_out = setTimeout(function(){
+                        score_reset.style.display = "none";
                         reset.style.display = "block";
                     }, 2000);
                 }
                 function changeTeams() {
+                    clearTimeout(time_out);
                     var scoreboard = document.getElementById("scoreboard");
                     scoreboard.style.display = "none";
                     var menu_scoreboard = document.getElementById("menu-scoreboard");
                     menu_scoreboard.style.display = "none";
                     var confirm_reset = document.getElementById("confirm-reset");
                     confirm_reset.style.display = "none";
-                    var menu_scoreboard_2 = document.getElementById("menu-scoreboard-2");
-                    menu_scoreboard_2.style.display = "none";
+                    var score_reset = document.getElementById("score-reset");
+                    score_reset.style.display = "none";
                     var team_names = document.getElementById("team-names");
                     team_names.style.display = "block";
                     var menu_team_names = document.getElementById("menu-team-names");
