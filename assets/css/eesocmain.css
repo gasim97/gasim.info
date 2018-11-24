@@ -533,6 +533,7 @@ input, select, textarea {
             #main .item.intro2.hover {
                     opacity: 0.5;
                     transition: all 0.1s ease;
+		    cursor: pointer;
                 }
 
 
@@ -1149,7 +1150,8 @@ input, select, textarea {
 }
 
 .menu li:hover > a, .menu .current-item > a {
-	text-decoration:none;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 /*----- Top Level -----*/
@@ -1236,7 +1238,8 @@ input, select, textarea {
 }
 
 .menu-clicked li:hover > a, .menu-clicked .current-item > a {
-	text-decoration:none;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 /*----- Top Level -----*/
@@ -1313,7 +1316,8 @@ input, select, textarea {
 }
 
 .menu-right li:hover > a, .menu-right .current-item > a {
-	text-decoration:none;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .menu-right a2 {
