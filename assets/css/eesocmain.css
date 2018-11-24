@@ -1316,6 +1316,11 @@ input, select, textarea {
 	text-decoration:none;
 }
 
+.menu-right a2 {
+    color: #FFFFFF;
+	transition: all linear 0.4s;
+}
+
 /*----- Top Level -----*/
 .menu-right > ul > li {
 	float: left;
@@ -1336,6 +1341,15 @@ input, select, textarea {
 .menu-right > ul > li:hover > a, .menu-right > ul > .current-item > a {
 	background: rgba(26, 99, 182, 0.85);
     color: #FFFFFF;
+}
+
+.menu-right > ul > li > a2 {
+    background: rgba(26, 99, 182, 0.85);
+    opacity: 0.85;
+    width: 12em;
+	padding: 2px;
+	display: inline-block;
+    text-align: center;
 }
 
 ::placeholder {
