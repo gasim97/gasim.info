@@ -1192,7 +1192,7 @@ input, select, textarea {
 }
 
 .menu li:hover > a, .menu .current-item > a {
-	text-decoration:none;
+	text-decoration: none;
 }
 
 /*----- Top Level -----*/
@@ -1214,12 +1214,14 @@ input, select, textarea {
 
 .menu > ul > li:hover > a, .menu > li:active > a, .menu > ul > li:hover > a2, .menu > li:active > a2 {
 	background: #FFFFFF;
-    color: #000000;
+    	color: #000000;
+	cursor: pointer;
 }
 
 .menu > ul > li:hover > a3, .menu > li:active > a3 {
 	background: rgba(18, 21, 29, 0.85);
-    color: #FFFFFF;
+    	color: #FFFFFF;
+	cursor: pointer;
 }
 
 .menu > ul > li > a2 {
@@ -1279,7 +1281,7 @@ input, select, textarea {
 }
 
 .menu-clicked li:hover > a, .menu-clicked .current-item > a {
-	text-decoration:none;
+	text-decoration: none;
 }
 
 /*----- Top Level -----*/
@@ -1301,7 +1303,8 @@ input, select, textarea {
 
 .menu-clicked > ul > li:hover > a, .menu-clicked > li:active > a {
 	background: rgba(18, 21, 29, 0.85);
-    color: #FFFFFF;
+    	color: #FFFFFF;
+	cursor: pointer;
 }
 
 .menu-clicked > ul > li > a2 {
@@ -1315,7 +1318,8 @@ input, select, textarea {
 
 .menu-clicked > ul > li:hover > a2, .menu-clicked > li:active > a2 {
 	background: #FFFFFF;
-    color: #000000;
+    	color: #000000;
+	cursor: pointer;
 }
 
 /*----- Menu-right Outline -----*/
@@ -1356,7 +1360,7 @@ input, select, textarea {
 }
 
 .menu-right li:hover > a, .menu-right .current-item > a {
-	text-decoration:none;
+	text-decoration: none;
 }
 
 /*----- Top Level -----*/
@@ -1378,5 +1382,6 @@ input, select, textarea {
 
 .menu-right > ul > li:hover > a, .menu-right > ul > .current-item > a {
 	background: rgba(18, 21, 29, 0.85);
-    color: #FFFFFF;
+    	color: #FFFFFF;
+	cursor: pointer;
 }
