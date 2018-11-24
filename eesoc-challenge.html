@@ -101,25 +101,17 @@
 						    <div class="menu-right-wrap" id="menu-scoreboard" style="display: none">
 							<nav class="menu-right">
 							    <ul class="clearfix">
-								<li><a onclick="menu_scoreboard_2()">Reset Score</a></li>
+								<li id="reset"><a onclick="confirm_reset()">Reset Score</a></li>
+								<li id="confirm-reset" style="display: none"><a onclick="reset()">Are You Sure?</a></li>
 								<li><a onclick="changeTeams()">Change Teams</a></li>
 							    </ul>
 							</nav>
 						    </div>
-							
+
 						    <div class="menu-right-wrap" id="menu-scoreboard-2" style="display: none">
 							<nav class="menu-right">
 							    <ul class="clearfix">
-								<li><a onclick="reset()">Are You Sure?</a></li>
-								<li><a onclick="changeTeams()">Change Teams</a></li>
-							    </ul>
-							</nav>
-						    </div>
-                            
-						    <div class="menu-right-wrap" id="menu-scoreboard-3" style="display: none">
-							<nav class="menu-right">
-							    <ul class="clearfix">
-								<li><a>Score Reset</a></li>
+								<li><a2>Score Reset</a2></li>
 								<li><a onclick="changeTeams()">Change Teams</a></li>
 							    </ul>
 							</nav>
@@ -217,27 +209,31 @@
                         document.getElementById("score2").innerHTML = result;
                     }, 500);
                 }
-                function menu_scoreboard_2() {
+                function confirm_reset() {
+                    var reset = document.getElementById("reset");
+                    reset.style.display = "none";
+                    var confirm_reset = document.getElementById("confirm-reset");
+                    confirm_reset.style.display = "block";
+                    setTimeout(function(){
+                        confirm_reset.style.display = "none";
+                        reset.style.display = "block";
+                    }, 5000);
+                }
+                function reset() {
+                    document.getElementById("score1").innerHTML = "0";
+                    document.getElementById("score2").innerHTML = "0";
                     var menu_scoreboard = document.getElementById("menu-scoreboard");
                     menu_scoreboard.style.display = "none";
                     var menu_scoreboard_2 = document.getElementById("menu-scoreboard-2");
                     menu_scoreboard_2.style.display = "block";
                     setTimeout(function(){
                         menu_scoreboard_2.style.display = "none";
-                        menu_scoreboard.style.display = "block";
-                    }, 5000);
-                }
-                function reset() {
-                    document.getElementById("score1").innerHTML = "0";
-                    document.getElementById("score2").innerHTML = "0";
-                    var menu_scoreboard_2 = document.getElementById("menu-scoreboard-2");
-                    menu_scoreboard_2.style.display = "none";
-                    var menu_scoreboard_3 = document.getElementById("menu-scoreboard-3");
-                    menu_scoreboard_3.style.display = "block";
-                    setTimeout(function(){
-                        menu_scoreboard_3.style.display = "none";
+                        var confirm_reset = document.getElementById("confirm-reset");
+                        confirm_reset.style.display = "none";
                         var menu_scoreboard = document.getElementById("menu-scoreboard");
+                        var reset = document.getElementById("reset");
                         menu_scoreboard.style.display = "block";
+                        reset.style.display = "block";
                     }, 2000);
                 }
                 function changeTeams() {
@@ -245,10 +241,10 @@
                     scoreboard.style.display = "none";
                     var menu_scoreboard = document.getElementById("menu-scoreboard");
                     menu_scoreboard.style.display = "none";
+                    var confirm_reset = document.getElementById("confirm-reset");
+                    confirm_reset.style.display = "none";
                     var menu_scoreboard_2 = document.getElementById("menu-scoreboard-2");
                     menu_scoreboard_2.style.display = "none";
-                    var menu_scoreboard_3 = document.getElementById("menu-scoreboard-3");
-                    menu_scoreboard_3.style.display = "none";
                     var team_names = document.getElementById("team-names");
                     team_names.style.display = "block";
                     var menu_team_names = document.getElementById("menu-team-names");
@@ -264,6 +260,8 @@
                     scoreboard.style.display = "block";
                     var menu_scoreboard = document.getElementById("menu-scoreboard");
                     menu_scoreboard.style.display = "block";
+                    var reset = document.getElementById("reset");
+                    reset.style.display = "block";
                 }
                 function newTeams() {
                     var team_1_input = document.getElementById("team-1-input").value;
@@ -300,6 +298,10 @@
                         scoreboard.style.display = "block";
                         var menu_scoreboard = document.getElementById("menu-scoreboard");
                         menu_scoreboard.style.display = "block";
+			var confirm_reset = document.getElementById("confirm-reset");
+                        confirm_reset.style.display = "none";
+			var reset = document.getElementById("reset");
+                        reset.style.display = "block";
                         document.getElementById("p101").innerHTML = "+10 <p>1</p>";
                         document.getElementById("p51").innerHTML = "+5 <p>2</p>";
                         document.getElementById("m51").innerHTML = "-5 <p>3</p>";
