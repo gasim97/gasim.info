@@ -344,12 +344,20 @@
                         document.getElementById("score1").innerHTML = "0";
                         document.getElementById("score2").innerHTML = "0";
                         if (team_1_input == "") {
-                            document.getElementById("team-1").innerHTML = "Team 1";
+                            if (team_2_input == "Team 1") {
+                                document.getElementById("team-1").innerHTML = "Team 2";
+                            }else {
+                                document.getElementById("team-1").innerHTML = "Team 1";
+                            }
                         }else {
                             document.getElementById("team-1").innerHTML = team_1_input;
                         }
                         if (team_2_input == "") {
-                            document.getElementById("team-2").innerHTML = "Team 2";
+                            if (team_1_input == "Team 2") {
+                                document.getElementById("team-2").innerHTML = "Team 1";
+                            }else {
+                                document.getElementById("team-2").innerHTML = "Team 2";
+                            }
                         }else {
                             document.getElementById("team-2").innerHTML = team_2_input;
                         }
