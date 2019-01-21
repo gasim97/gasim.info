@@ -591,20 +591,76 @@ input, select, textarea {
 				}
 
                 #main .item.intro3 h2 {
-					font-size: 2em;
-					line-height: 1em;
-                    text-align: left;
-                    opacity: 0.65;
+					font-size: 3em;
+                    align-items: center;
+                    text-align: center;
+                    opacity: 1;
 				}
 
-				#main .item.intro3 p {
-                    			font-family: FontAwesome;
-					    font-size: 0.2em;
-					    color: crimson;
-					    font-weight: bolder;
-					    align-items: center;
-					    text-align: center;
-					opacity: 1;
+                #main .item.intro3 h3 {
+					font-size: 4em;
+                    align-items: center;
+                    text-align: center;
+                    opacity: 1;
+				}
+
+                #main .item.intro3 h4 {
+                    color: #FF4500;
+					font-size: 4em;
+                    align-items: center;
+                    text-align: center;
+                    opacity: 1;
+				}
+
+                #main .item.intro3 h5 {
+                    color: crimson;
+					font-size: 4em;
+                    align-items: center;
+                    text-align: center;
+                    opacity: 1;
+				}
+                
+                #main .item.intro3 p {
+					font-size: 1em;
+                    color: #00ccff;
+                    font-weight: bolder;
+                    align-items: center;
+                    text-align: center;
+					opacity: 0.9;
+				}
+                
+                #main .item.intro3 p2 {
+					font-size: 1em;
+                    color: limegreen;
+                    font-weight: bolder;
+                    align-items: center;
+                    text-align: center;
+					opacity: 0.9;
+				}
+
+                #main .item.intro3 p3 {
+					font-size: 1em;
+                    color: crimson;
+                    font-weight: bolder;
+                    align-items: center;
+                    text-align: center;
+					opacity: 0.9;
+				}
+
+                #main .item.intro3 p4 {
+					font-size: 2em;
+                    font-weight: bolder;
+                    align-items: center;
+                    text-align: center;
+					opacity: 0.9;
+				}
+
+                #main .item.intro3 p5 {
+					font-size: 1em;
+                    font-weight: bolder;
+                    align-items: center;
+                    text-align: center;
+					opacity: 0.9;
 				}
 
 			#main .item.thumb {
