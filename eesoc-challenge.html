@@ -53,33 +53,33 @@
 									<h1 id="score2">0</h1>
 								</div>
 							</div>
-				
-                            	<div class="item intro3 span-5"></div>
-                            	<div class="item intro3 span-5"></div>
-                            	<div class="item intro3 span-5"></div>
-                            	<div class="item intro3 span-5"></div>
+				<div class="items">
+                                	<div class="item intro3 span-2"><p4>Points System</p4><p5>-</p5><p5>Correct Answer: <p2>+10</p2></p5><p5>Correct Answer (Bonus): <p2>+5</p2></p5><p5>Wrong Answer after Interuption: <p3>-5</p3></p5></div>
+                                	<div class="item intro3 span-2" id="timer"><h3>10</h3></div>
+                                	<div class="item intro3 span-2"></div>
+				</div>
                         
-                            <div class="items">
-                                <div class="item intro2 span-4" onclick="p101()">
-									<h1 id="p101">+10</h1>
-								</div>
-                                <div class="item intro2 span-4" onclick="p51()">
-									<h1 id="p51">+5</h1>
-								</div>
-                                <div class="item intro2 span-4" onclick="m51()">
-									<h1 id="m51">-5</h1>
-								</div>
-                                <div class="item intro3 span-5"></div>
-                                <div class="item intro2 span-4" onclick="p102()">
-									<h1 id="p102">+10</h1>
-								</div>
-                                <div class="item intro2 span-4" onclick="p52()">
-									<h1 id="p52">+5</h1>
-								</div>
-                                <div class="item intro2 span-4" onclick="m52()">
-									<h1 id="m52">-5</h1>
-								</div>
-							</div>
+                            	<div class="items">
+                                	<div class="item intro2 span-4" onclick="p101()">
+						<h1 id="p101">+10</h1>
+					</div>
+                                	<div class="item intro2 span-4" onclick="p51()">
+						<h1 id="p51">+5</h1>
+					</div>
+                                	<div class="item intro2 span-4" onclick="m51()">
+						<h1 id="m51">-5</h1>
+					</div>
+                                	<div class="item intro3 span-5"></div>
+                                	<div class="item intro2 span-4" onclick="p102()">
+						<h1 id="p102">+10</h1>
+					</div>
+                                	<div class="item intro2 span-4" onclick="p52()">
+						<h1 id="p52">+5</h1>
+					</div>
+                                	<div class="item intro2 span-4" onclick="m52()">
+						<h1 id="m52">-5</h1>
+					</div>
+				</div>
                         </div>
                         
 					</section>    
@@ -132,6 +132,16 @@
                 var time_out;
                 var time_out_score_1;
                 var time_out_score_2;
+		var timer_0;
+                var timer_1;
+                var timer_2;
+                var timer_3;
+                var timer_4;
+                var timer_5;
+                var timer_6;
+                var timer_7;
+                var timer_8;
+                var timer_9;
                 var total_1 = 0;
                 var total_2 = 0;
                 function p101() {
@@ -383,6 +393,17 @@
                         document.getElementById("p102").innerHTML = "+10 <p>Q</p>";
                         document.getElementById("p52").innerHTML = "+5 <p>W</p>";
                         document.getElementById("m52").innerHTML = "-5 <p>E</p>";
+			clearTimeout(timer_0);
+                        clearTimeout(timer_1);
+                        clearTimeout(timer_2);
+                        clearTimeout(timer_3);
+                        clearTimeout(timer_4);
+                        clearTimeout(timer_5);
+                        clearTimeout(timer_6);
+                        clearTimeout(timer_7);
+                        clearTimeout(timer_8);
+                        clearTimeout(timer_9);
+                        document.getElementById("timer").innerHTML = "<h2>10</h2><p>Space Bar (timer)</p>";
                         setTimeout(function(){
                             document.getElementById("p101").innerHTML = "+10";
                             document.getElementById("p51").innerHTML = "+5";
@@ -392,6 +413,41 @@
                             document.getElementById("m52").innerHTML = "-5";
                         }, 3000);
                     }
+                }
+		function timer() {
+                    var timer = document.getElementById("timer");
+                    var counter = 10;
+                    timer.innerHTML = "<h3>10</h3>";
+                    timer_9 = setTimeout(function(){
+                        timer.innerHTML = "<h3>09</h3>";
+                    }, 1000);
+                    timer_8 = setTimeout(function(){
+                        timer.innerHTML = "<h3>08</h3>";
+                    }, 2000);
+                    timer_7 = setTimeout(function(){
+                        timer.innerHTML = "<h3>07</h3>";
+                    }, 3000);
+                    timer_6 = setTimeout(function(){
+                        timer.innerHTML = "<h3>06</h3>";
+                    }, 4000);
+                    timer_5 = setTimeout(function(){
+                        timer.innerHTML = "<h3>05</h3>";
+                    }, 5000);
+                    timer_4 = setTimeout(function(){
+                        timer.innerHTML = "<h3>04</h3>";
+                    }, 6000);
+                    timer_3 = setTimeout(function(){
+                        timer.innerHTML = "<h4>03</h4>";
+                    }, 7000);
+                    timer_2 = setTimeout(function(){
+                        timer.innerHTML = "<h4>02</h4>";
+                    }, 8000);
+                    timer_1 = setTimeout(function(){
+                        timer.innerHTML = "<h4>01</h4>";
+                    }, 9000);
+                    timer_0 = setTimeout(function(){
+                        timer.innerHTML = "<h5>00</h5>";
+                    }, 10000);
                 }
 		
                 var team_1 = document.getElementById("team-1-input");
@@ -430,6 +486,18 @@
                             p52();
                         }else if (key == 69 || key == 187) {
                             m52();
+                        }else if (key == 32) {
+                            clearTimeout(timer_0);
+                            clearTimeout(timer_1);
+                            clearTimeout(timer_2);
+                            clearTimeout(timer_3);
+                            clearTimeout(timer_4);
+                            clearTimeout(timer_5);
+                            clearTimeout(timer_6);
+                            clearTimeout(timer_7);
+                            clearTimeout(timer_8);
+                            clearTimeout(timer_9);
+                            timer();
                         }
                     }
                 }
