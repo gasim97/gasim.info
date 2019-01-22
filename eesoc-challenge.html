@@ -55,7 +55,7 @@
 							</div>
 				<div class="items">
                                 	<div class="item intro3 span-2"><p4>Points System</p4><p5>-</p5><p5>Correct Answer: <p2>+10</p2></p5><p5>Correct Answer (Bonus): <p2>+5</p2></p5><p5>Wrong Answer after Interuption: <p3>-5</p3></p5></div>
-                                	<div class="item intro3 span-2" id="timer"><h3>10</h3></div>
+                                	<div class="item intro3 span-2" id="timer"><h3>15</h3></div>
                                 	<div class="item intro3 span-2"></div>
 				</div>
                         
@@ -142,6 +142,11 @@
                 var timer_7;
                 var timer_8;
                 var timer_9;
+		var timer_10;
+                var timer_11;
+                var timer_12;
+                var timer_13;
+		var timer_14;
                 var total_1 = 0;
                 var total_2 = 0;
                 function p101() {
@@ -403,7 +408,12 @@
                         clearTimeout(timer_7);
                         clearTimeout(timer_8);
                         clearTimeout(timer_9);
-                        document.getElementById("timer").innerHTML = "<h2>10</h2><p>Space Bar (timer)</p>";
+			    clearTimeout(timer_10);
+				clearTimeout(timer_11);
+				clearTimeout(timer_12);
+				clearTimeout(timer_13);
+				clearTimeout(timer_14)
+                        document.getElementById("timer").innerHTML = "<h2>15</h2><p>Space Bar (timer)</p>";
                         setTimeout(function(){
                             document.getElementById("p101").innerHTML = "+10";
                             document.getElementById("p51").innerHTML = "+5";
@@ -416,38 +426,52 @@
                 }
 		function timer() {
                     var timer = document.getElementById("timer");
-                    var counter = 10;
-                    timer.innerHTML = "<h3>10</h3>";
+                    timer.innerHTML = "<h3>15</h3>";
+			timer_14 = setTimeout(function(){
+                        timer.innerHTML = "<h3>14</h3>";
+                    }, 1000);
+			timer_13 = setTimeout(function(){
+                        timer.innerHTML = "<h3>13</h3>";
+                    }, 2000);
+			timer_12 = setTimeout(function(){
+                        timer.innerHTML = "<h3>12</h3>";
+                    }, 3000);
+			timer_11 = setTimeout(function(){
+                        timer.innerHTML = "<h3>11</h3>";
+                    }, 4000);
+			timer_10 = setTimeout(function(){
+                        timer.innerHTML = "<h3>10</h3>";
+                    }, 5000);
                     timer_9 = setTimeout(function(){
                         timer.innerHTML = "<h3>09</h3>";
-                    }, 1000);
+                    }, 6000);
                     timer_8 = setTimeout(function(){
                         timer.innerHTML = "<h3>08</h3>";
-                    }, 2000);
+                    }, 7000);
                     timer_7 = setTimeout(function(){
                         timer.innerHTML = "<h3>07</h3>";
-                    }, 3000);
+                    }, 8000);
                     timer_6 = setTimeout(function(){
                         timer.innerHTML = "<h3>06</h3>";
-                    }, 4000);
+                    }, 9000);
                     timer_5 = setTimeout(function(){
                         timer.innerHTML = "<h3>05</h3>";
-                    }, 5000);
+                    }, 10000);
                     timer_4 = setTimeout(function(){
                         timer.innerHTML = "<h3>04</h3>";
-                    }, 6000);
+                    }, 11000);
                     timer_3 = setTimeout(function(){
                         timer.innerHTML = "<h4>03</h4>";
-                    }, 7000);
+                    }, 12000);
                     timer_2 = setTimeout(function(){
                         timer.innerHTML = "<h4>02</h4>";
-                    }, 8000);
+                    }, 13000);
                     timer_1 = setTimeout(function(){
                         timer.innerHTML = "<h4>01</h4>";
-                    }, 9000);
+                    }, 14000);
                     timer_0 = setTimeout(function(){
                         timer.innerHTML = "<h5>00</h5>";
-                    }, 10000);
+                    }, 15000);
                 }
 		
                 var team_1 = document.getElementById("team-1-input");
@@ -497,6 +521,11 @@
                             clearTimeout(timer_7);
                             clearTimeout(timer_8);
                             clearTimeout(timer_9);
+				clearTimeout(timer_10);
+				clearTimeout(timer_11);
+				clearTimeout(timer_12);
+				clearTimeout(timer_13);
+				clearTimeout(timer_14);
                             timer();
                         }
                     }
