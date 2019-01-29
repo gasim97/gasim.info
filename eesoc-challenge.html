@@ -483,6 +483,8 @@
                     }, 14000);
                     timer_0 = setTimeout(function(){
                         timer.innerHTML = "<h5>00</h5>";
+			var audio = new Audio('audio/timeout.mp3');
+                        audio.play();
                     }, 15000);
                 }
 		function startMatch() {
@@ -502,11 +504,15 @@
                             var score2 = parseInt(score2_string);
                             if (score1 > score2) {
                                 document.getElementById("team-1").innerHTML = team_1_name + " | Winner!";
-                                document.getElementById("team-2").innerHTML = team_2_name + " | Nice Try!"
+                                document.getElementById("team-2").innerHTML = team_2_name + " | Nice Try!";
+				var audio = new Audio('audio/bong.mp3');
+                                audio.play();
                                 clearInterval(match_timer);
                             } else if (score2 > score1) {
                                 document.getElementById("team-2").innerHTML = team_2_name + " | Winner!";
-                                document.getElementById("team-1").innerHTML = team_1_name + " | Nice Try!"
+                                document.getElementById("team-1").innerHTML = team_1_name + " | Nice Try!";
+				var audio = new Audio('audio/bong.mp3');
+                                audio.play();
                                 clearInterval(match_timer);
                             } else {
                                 seconds = 30;
