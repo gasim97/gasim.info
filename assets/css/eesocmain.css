@@ -457,7 +457,7 @@ input, select, textarea {
 			}
 
 			#main .item.intro {
-				background-color: rgba(18, 21, 29, 0.05);
+				background-color: rgba(0, 87, 144, 0.60);
 				background-image: url("images/overlay.png");
 				display: -moz-flex;
 				display: -webkit-flex;
@@ -508,7 +508,7 @@ input, select, textarea {
 				}
 
             #main .item.intro2 {
-				background-color: rgba(18, 21, 29, 0.05);
+				background-color: rgba(0, 87, 144, 0.60);
 				background-image: url("images/overlay.png");
 				display: -moz-flex;
 				display: -webkit-flex;
