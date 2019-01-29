@@ -133,6 +133,8 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
             <script>
+                var team_1_name;
+                var team_2_name;
                 var time_out;
                 var time_out_score_1;
                 var time_out_score_2;
@@ -365,20 +367,26 @@
                         if (team_1_input == "") {
                             if (team_2_input == "Team 1") {
                                 document.getElementById("team-1").innerHTML = "Team 2";
+                                team_1_name =  "Team 2";
                             }else {
                                 document.getElementById("team-1").innerHTML = "Team 1";
+                                team_1_name =  "Team 1";
                             }
                         }else {
                             document.getElementById("team-1").innerHTML = team_1_input;
+                            team_1_name = team_1_input;
                         }
                         if (team_2_input == "") {
                             if (team_1_input == "Team 2") {
                                 document.getElementById("team-2").innerHTML = "Team 1";
+                                team_2_name =  "Team 1";
                             }else {
                                 document.getElementById("team-2").innerHTML = "Team 2";
+                                team_2_name =  "Team 2";
                             }
                         }else {
                             document.getElementById("team-2").innerHTML = team_2_input;
+                            team_2_name = team_2_input;
                         }
                         document.getElementById("team-1-input").innerHTML = "";
                         document.getElementById("team-2-input").innerHTML = "";
@@ -486,7 +494,23 @@
                     var seconds = 0;
                     match_timer = setInterval(function(){
                         if (seconds == 0 && minutes == 0) {
-                            clearInterval(match_timer);
+                            var score1_obj = document.getElementById("score1");
+                            var score1_string = score1_obj.textContent;
+                            var score1 = parseInt(score1_string);
+                            var score2_obj = document.getElementById("score2");
+                            var score2_string = score2_obj.textContent;
+                            var score2 = parseInt(score2_string);
+                            if (score1 > score2) {
+                                document.getElementById("team-1").innerHTML = team_1_name + " | Winner!";
+                                document.getElementById("team-2").innerHTML = team_2_name + " | Nice Try!"
+                                clearInterval(match_timer);
+                            } else if (score2 > score1) {
+                                document.getElementById("team-2").innerHTML = team_2_name + " | Winner!";
+                                document.getElementById("team-1").innerHTML = team_1_name + " | Nice Try!"
+                                clearInterval(match_timer);
+                            } else {
+                                seconds = 30;
+                            }
                         } else if (seconds == 0) {
                             minutes = minutes - 1;
                             seconds = 59;
@@ -526,6 +550,8 @@
                     document.getElementById("match-timer").innerHTML = "<h2>30:00</h2><p>Match Timer</p>"
                     document.getElementById("confirm-reset-timer").style = "display: none";
                     document.getElementById("timer-reset").style = "display: block";
+		    document.getElementById("team-1").innerHTML = team_1_name;
+                    document.getElementById("team-2").innerHTML = team_2_name;
                     time_out = setTimeout(function(){
                         document.getElementById("timer-reset").style = "display: none";
                         document.getElementById("start-timer").style = "display: block";
