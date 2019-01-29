@@ -56,7 +56,7 @@
 				<div class="items">
                                 	<div class="item intro3 span-2"><p4>Points System</p4><p5>-</p5><p5>Correct Answer: <p2>+10</p2></p5><p5>Correct Answer (Bonus): <p2>+5</p2></p5><p5>Wrong Answer after Interuption: <p3>-5</p3></p5></div>
                                 	<div class="item intro3 span-2" id="timer"><h3>15</h3></div>
-                                	<div class="item intro3 span-2" id="match-timer"><h2>30:00</h2><p>Match Timer</p></div>
+                                	<div class="item intro3 span-2" id="match-timer"><h2>45:00</h2><p>Match Timer</p></div>
 				</div>
                         
                             	<div class="items">
@@ -492,7 +492,7 @@
                     document.getElementById("start-timer").style = "display: none";
                     document.getElementById("reset-timer").style = "display: block";
                     var time;
-                    var minutes = 30;
+                    var minutes = 45;
                     var seconds = 0;
                     match_timer = setInterval(function(){
                         if (seconds == 0 && minutes == 0) {
@@ -553,7 +553,7 @@
                 function resetTimer() {
                     clearInterval(match_timer);
                     clearTimeout(time_out);
-                    document.getElementById("match-timer").innerHTML = "<h2>30:00</h2><p>Match Timer</p>"
+                    document.getElementById("match-timer").innerHTML = "<h2>45:00</h2><p>Match Timer</p>"
                     document.getElementById("confirm-reset-timer").style = "display: none";
                     document.getElementById("timer-reset").style = "display: block";
 		    document.getElementById("team-1").innerHTML = team_1_name;
