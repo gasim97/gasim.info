@@ -56,7 +56,7 @@
 				<div class="items">
                                 	<div class="item intro3 span-2"><p4>Points System</p4><p5>-</p5><p5>Correct Answer: <p2>+10</p2></p5><p5>Correct Answer (Bonus): <p2>+5</p2></p5><p5>Wrong Answer after Interuption: <p3>-5</p3></p5></div>
                                 	<div class="item intro3 span-2" id="timer"><h3>15</h3></div>
-                                	<div class="item intro3 span-2"></div>
+                                	<div class="item intro3 span-2"></div><h2>30:00</h2><p>Match Timer</p></div>
 				</div>
                         
                             	<div class="items">
@@ -101,6 +101,10 @@
 						    <div class="menu-right-wrap" id="menu-scoreboard" style="display: none">
 							<nav class="menu-right">
 							    <ul class="clearfix">
+								<li id="start-timer"><a onclick="startMatch()">Start Match Timer</a></li>
+                                        			<li id="reset-timer" style="display: none"><a onclick="confirmTimerReset()">Reset Match Timer</a></li>
+                                        			<li id="confirm-reset-timer" style="display: none"><a onclick="resetTimer()">Are You Sure?</a></li>
+                                        			<li id="timer-reset" style="display: none"><a2>Timer Reset</a2></li>
 								<li id="reset"><a onclick="confirm_reset()">Reset Score</a></li>
 								<li id="confirm-reset" style="display: none"><a onclick="reset()">Are You Sure?</a></li>
 								<li id="score-reset" style="display: none"><a2>Score Reset</a2></li>
@@ -472,6 +476,60 @@
                     timer_0 = setTimeout(function(){
                         timer.innerHTML = "<h5>00</h5>";
                     }, 15000);
+                }
+		function startMatch() {
+                    var timer = document.getElementById("match-timer");
+                    document.getElementById("start-timer").style = "display: none";
+                    document.getElementById("reset-timer").style = "display: block";
+                    var time;
+                    var minutes = 30;
+                    var seconds = 0;
+                    match_timer = setInterval(function(){
+                        if (seconds == 0 && minutes == 0) {
+                            clearInterval(match_timer);
+                        } else if (seconds == 0) {
+                            minutes = minutes - 1;
+                            seconds = 59;
+                        } else {
+                            seconds = seconds - 1;
+                        }
+                        if (minutes < 10) {
+                            if (seconds < 10) {
+                                time = "<h2>0" + minutes +":0" + seconds + "</h2><p>Match Timer</p>";
+                                timer.innerHTML = time;
+                            } else {
+                                time = "<h2>0" + minutes +":" + seconds + "</h2><p>Match Timer</p>";
+                                timer.innerHTML = time;
+                            }
+                        } else {
+                            if (seconds < 10) {
+                                time = "<h2>" + minutes +":0" + seconds + "</h2><p>Match Timer</p>";
+                                timer.innerHTML = time;
+                            } else {
+                                time = "<h2>" + minutes +":" + seconds + "</h2><p>Match Timer</p>";
+                                timer.innerHTML = time;
+                            }
+                        }
+                    }, 1000);
+                }
+                function confirmTimerReset() {
+                    document.getElementById("reset-timer").style = "display: none";
+                    document.getElementById("confirm-reset-timer").style = "display: block";
+                    time_out = setTimeout(function(){
+                        document.getElementById("confirm-reset-timer").style = "display: none";
+                        document.getElementById("reset-timer").style = "display: block";  
+                    }, 5000);
+                }
+                function resetTimer() {
+                    clearInterval(match_timer);
+                    clearTimeout(time_out);
+                    document.getElementById("match-timer").innerHTML = "<h2>30:00</h2><p>Match Timer</p>"
+                    document.getElementById("confirm-reset-timer").style = "display: none";
+                    document.getElementById("timer-reset").style = "display: block";
+                    time_out = setTimeout(function(){
+                        document.getElementById("timer-reset").style = "display: none";
+                        document.getElementById("start-timer").style = "display: block";
+                    }, 2000);
                 }
 		
                 var team_1 = document.getElementById("team-1-input");
