@@ -1395,7 +1395,7 @@ input, select, textarea {
 .menu-right > ul > li > a {
     background: #FFFFFF;
     opacity: 0.85;
-    width: 12em;
+    width: 10em;
 	padding: 2px;
 	display: inline-block;
     text-align: center;
