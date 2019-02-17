@@ -1177,6 +1177,7 @@ input, select, textarea {
 	margin: 0px;
 	list-style: none;
     font-family: 'Source Sans Pro';
+	padding: 2px;
 }
 
 .menu a, .menu a2 {
@@ -1208,6 +1209,10 @@ input, select, textarea {
 	padding: 2px;
 	display: inline-block;
     text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .menu > ul > li:hover > a, .menu > li:active > a, .menu > ul > li:hover > a2, .menu > li:active > a2 {
@@ -1229,6 +1234,10 @@ input, select, textarea {
 	padding: 2px;
 	display: inline-block;
     text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .menu > ul > li > a3 {
@@ -1238,6 +1247,10 @@ input, select, textarea {
 	padding: 2px;
 	display: inline-block;
     text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 /*----- Menu-clicked Outline -----*/
@@ -1266,6 +1279,7 @@ input, select, textarea {
 	margin: 0px;
 	list-style: none;
     font-family: 'Source Sans Pro';
+	padding: 2px;
 }
 
 .menu-clicked a {
@@ -1297,6 +1311,10 @@ input, select, textarea {
 	padding: 2px;
 	display: inline-block;
     text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .menu-clicked > ul > li:hover > a, .menu-clicked > li:active > a {
@@ -1312,6 +1330,10 @@ input, select, textarea {
 	padding: 2px;
 	display: inline-block;
     text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .menu-clicked > ul > li:hover > a2, .menu-clicked > li:active > a2 {
@@ -1350,6 +1372,7 @@ input, select, textarea {
 	margin: 0px;
 	list-style: none;
     font-family: 'Source Sans Pro';
+	padding: 2px;
 }
 
 .menu-right a {
@@ -1376,6 +1399,10 @@ input, select, textarea {
 	padding: 2px;
 	display: inline-block;
     text-align: center;
+	border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .menu-right > ul > li:hover > a, .menu-right > ul > .current-item > a {
